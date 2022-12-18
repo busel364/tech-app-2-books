@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+}
+
+.highlightedBookImg {
+  width: 257px;
+  height: 400px;
+  transition: all 0.5s;
+  box-shadow: 3px 10px 10px;
+}
+
+.highlightedBookImgBackground {
+  background-color: black;
+  width: 257px;
+  height: 400px;
+}
+
+.highlightedBookImg:hover {
+  box-shadow: 0 2px 5px;
+  opacity: 0.7;
+  transition-duration: 0.5s;
+}
+
+.highlightedBooks {
+  padding-right: 48px;
+  margin: 0 auto;
+  background-color: rgb(201, 215, 217);
+  /* 103,92,78 */
+}
+
+.highlightedBooks>p {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.highlightedBookDivP>p {
+  font-size: 1.7em;
+}
+
+.highlightedBook {
+  background-color: rgba(244, 244, 241, 0.81);
+  box-shadow: -3px 8px 15px;
+}
+
+.highlightedBookButton {
+  width: 5vw;
+  height: 8vh;
+  border: 0;
+  font-size: 3em;
+  position: relative;
+  top: 18vh;
+  left: 15vw;
+}
+
+.highlightedBookButton:hover {
+  color: goldenrod;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid rgba(52, 152, 219, 0.5);
+  border-radius: 50%;
+  width: 10vw;
+  height: 10vw;
+  animation: spin 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.mainLoader {
+  top: 40vh;
+  margin: 0 auto;
+  position: relative;
+  width: 15vw;
+  height: 15vw;
+}
+
+.cafeLibrary {
+  background-color: rgb(244, 244, 241);
+}
+
+.cafeLibrary p {
+  font-size: 2em;
+}
+
+.cafeLibraryButtons {
+  z-index: 10;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  padding: 10px;
+  box-shadow: 5px 10px 10px;
+  transition-duration: 0.5s;
+}
+
+.cafeLibraryButtons:hover {
+  background-color: #333;
+  color: white;
+  box-shadow: 0px 5px 5px black;
+  transition-duration: 0.5s;
+}
+
+.divRouter {
+  background-color: rgb(244, 244, 241);
+}
+
+.divRouter img {
+  position: relative;
+}
+
+.divRouter p {
+  font-size: 2em;
+}
+
+.divRouterBook {
+  width: 20vw;
+  top: 9vh;
+}
+
+.divRouterCup {
+  width: 18vw;
+  top: -13vh;
+}
+
+.routerButtons {
+  text-decoration: none;
+  position: relative;
+  top: 15vh;
+  border: 2px solid #333;
+  border-radius: 5px;
+  font-size: 2em;
+  font-weight: 400;
+  color: #333;
+  box-shadow: 8px 10px 10px;
+  transition: all;
+  background-color: rgba(201, 215, 217, 0.542);
+  transition-duration: 0.5s;
+}
+
+.routerButtons:hover {
+  color: whitesmoke;
+  box-shadow: 0px 3px 10px black;
+  background-color: #333;
+
+}
+
+.header {
+  background-color: #333;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 50px;
+  display: block;
+  transition: top 1s;
+  color: white;
+}
+
+.headerHidden {
+  top: -75px;
+}
+
+.carouselButton {
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  padding: 15px;
+  font-size: 2.5em;
+
+  transition-duration: 0.25s;
+}
+
+.carouselButton:hover {
+  border-color: #333;
+  color: #333;
+  transition-duration: 0.25s;
+}
+
+.carouselDiv {
+  position: relative;
+  bottom: 40vh;
+  left: 55vw;
+  width: 20vw;
+  height: 25vh;
+}
+
+
+.linkNavItems,
+.headerShop {
+  color: white;
+  text-decoration: none;
+  width: 110px;
+}
+
+.linkNavItems:hover,
+.headerShop:hover,
+.linkNavItems>li:hover {
+  font-weight: 600;
+  color: white;
+}
+
+.linkNavItems::after {
+  display: block;
+  content: '';
+  margin: auto;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+.linkNavItems:hover::after {
+  width: 100%;
+}
+
+.divHeaderShop {
+  margin: 0 auto;
+  padding-top: 15px;
+  display: none;
+  background-color: #333;
+  height: 120px;
+  width: 140px;
+  list-style: none;
+  text-align: start;
+}
+
+.headerShop:hover .divHeaderShop {
+  display: block;
+}
+
+.headerImg {
+  width: 30px;
+}
+
+.leftBar {
+  font-size: 1.5em;
+  background-color: rgb(244, 244, 241);
+  height: 60vh;
+}
+
+.shopMainContainer {
+  background-color: rgb(244, 244, 241);
+}
+
+.shopMainContainer>p {
+  font-size: 3em;
+}
+
+.mainPageItemImg {
+  width: 257px;
+  height: 400px;
+  transition: all 0.5s;
+  box-shadow: 3px 10px 10px;
+}
+
+.mainPageItemImgBg {
+  background-color: black;
+  width: 257px;
+  height: 400px;
+}
+
+.mainPageItemImg:hover {
+  box-shadow: 0 2px 5px;
+  opacity: 0.7;
+  transition-duration: 0.5s;
+}
+
+.mainPageItem {
+  color: black;
+  text-decoration: none;
+}
+
+.mainPageItem:hover {
+  color: black;
+}
+
+.mainPageItem:after {
+  display: block;
+  content: '';
+  margin: auto;
+  width: 0;
+  height: 3px;
+  background-color: #333;
+  transition: width 0.3s;
+}
+
+.mainPageItem:hover::after {
+  width: 100%;
+}
+
+.shopItemPage {
+  background-color: rgb(244, 244, 241);
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+
+.shopItemPageImg {
+  width: 257px;
+  height: 400px;
+}
+
+.shopItemPageLink {
+  text-decoration: none;
+  padding: 6px;
+  color: #333;
+  text-align: center;
+  border: #333 2px solid;
+}
+
+.shopItemPageLink,
+.shopItemPageButton {
+  transition: 0.3s ease;
+}
+
+.shopItemPageLink:hover,
+.shopItemPageButton:hover {
+  color: white;
+  background-color: #333;
+  transition: 0.3s ease;
+}
+
+.authorsMainPage {
+  margin: 0 auto;
+  background-color: rgb(244, 244, 241);
+}
+
+.authorMainDiv {
+  font-size: 2em;
+  width: 280px;
+}
+
+.linkAuthors {
+  padding: 15px;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  transition-duration: 0.5s;
+}
+
+.linkAuthors:hover {
+  color: white;
+  background-color: #333;
+  border: 2px solid #333;
+  transition-duration: 0.5s;
+}
+
+.wishListContainer {
+  background-color: rgb(244, 244, 241);
+  margin: 0 auto;
+  height: max-content;
+}
+
+.wishListIsEmpty {
+  font-size: 2em;
+  height: 79vh;
+}
+
+.wishListItem {
+  width: 280px;
+  color: black;
+}
+
+.wishListItem:hover {
+  color: black;
+}
+
+.linkToAuthor {
+  color: #333;
+}
+
+.linkToAuthor:hover {
+  color: #333;
+}
+
+.menuMainBlock {
+  background-color: rgb(244, 244, 241);
+}
+
+.displayDrinks {
+  margin: 0 auto;
+  color: #333;
+  border-bottom: 2px solid #333;
+  font-size: 1.5rem;
+}
+
+.linkDrinks {
+  color: #333;
+}
+
+.bookSeat input {
+  width: 250px;
+  margin: 12px;
+  font-size: 1.7rem;
+
+}
+
+.bookSeat>form,
+.displayBooking,
+.bookSeat>.loginMain {
+  background-color: #333;
+  color: #f3f3f3;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  box-shadow: 5px 20px 10px black;
+}
+
+.bookSeatButton {
+  transition: 0.3s ease;
+  font-size: 1.7rem;
+  color: white;
+  border: 2px solid white;
+  background-color: #333;
+}
+
+.bookSeatButton:hover {
+  color: #333;
+  background-color: white;
+  transition: 0.3s ease;
+}
+
+.checkOutRemoveButton {
+  margin: 0 auto;
+}
+
+.checkOutPageButtons {
+  font-size: 1.5rem;
+}
+
+.paymentsItemImgBg {
+  width: 170px;
+  height: 270px;
+}
+
+.paymentsItemImg {
+  width: 170px;
+  height: 270px;
+}
+
+.paymentsItemLink {
+  color: black;
+}
+
+.paymentsItemLink:hover {
+  color: black;
+}
+
+.divPaymentPage {
+  font-size: 1.5rem;
+}
+
+.cardBackground {
+  margin: 0 auto;
+}
+
+.card {
+  margin: 0 auto;
+  width: 400px;
+  height: 250px;
+  border-radius: 15px;
+  border: 4px solid rgb(19, 19, 37);
+  box-shadow: 0 10px 20px black;
+}
+
+.cardMain {
+  background-image: url('https://chip-ua.com/wp-content/uploads/Chip-UA-Kontaktnaya-plastikovaya-smart-karta-s-chipom-SLE4428-SLE5528.png');
+  background-size: 110%;
+  background-position-x: center;
+  background-position-y: -100px;
+
+}
+
+.card input {
+  background-color: whitesmoke;
+  font-weight: 500;
+  border: 0;
+  border-bottom: 2px solid whitesmoke;
+  /* position: relative; */
+  font-size: 1.4rem;
+  transition: border-bottom;
+  transition-duration: 0.5s;
+  outline: none;
+}
+
+.card input:hover {
+  border-bottom: 2px solid black;
+}
+
+
+.cardBack {
+  background-color: whitesmoke;
+}
+
+.cardCVV {
+  width: 100px;
+  margin: 10% 40%;
+}
+
+.magnite {
+  margin-top: 50px;
+  height: 50px;
+  width: 100%;
+  background-color: black;
+}
+
+.CVV {
+  width: 100px;
+}
+
+.cafeImg {
+  height: 350px;
+}
+
+.childZoneP {
+  font-size: 2.1em;
+}
+
+.footerBlock {
+  background-color: #333;
+  font-size: 1.5rem;
+}
+
+.footerLink {
+  color: white;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.footerP {
+  color: white;
+}
+
+.contactBlock {
+  background-color: rgb(244, 244, 241);
+  margin: 0 auto;
+  font-size: 1.5em;
+  height: 70vh;
+}
+
+.contactImg {
+  width: 150px;
+}
+
+.loginMainDivLink {
+  margin: 0 auto;
+}
+
+.loginMainLink {
+  text-decoration: none;
+  padding: 6px;
+  color: white;
+  text-align: center;
+  border: #333 2px solid;
+}
+
+.loginMainLink {
+  transition: 0.3s ease;
+}
+
+.loginMainLink:hover {
+  color: white;
+  border: 2px solid white;
+  transition: 0.3s ease;
+}
+
+.profile{
+  font-size: 2rem;
+  height: 70vh;
+}
